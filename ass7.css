@@ -1,0 +1,22 @@
+body {
+    font-family: Arial;
+    background-color: #f0f8ff;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+h1 {
+    text-align: center;
+    color: #003366;
+}
+
+.section-title {
+    color: #007BFF;
+}

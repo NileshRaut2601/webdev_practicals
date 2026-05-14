@@ -1,0 +1,113 @@
+<!-- Create a restaurant website using HTML and CSS that focuses on creating an attractive
+and well-structured layout. It helps practice menu design, image alignment, color
+themes, and responsive styling for a visually appealing user experience.
+● Build a restaurant webpage to showcase strong HTML and CSS skills with a more
+complex and detailed layout.
+● Use CSS Grid to align food items, drinks, prices, and images in a clean and
+organized manner.
+● Enhance visual appeal with suitable color combinations, font styles, image galleries,
+and optional sliding images. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0px;
+            font-family:Arial;
+            background-color: rgb(251, 245, 237);
+           
+        }
+         header{
+            background-color: rgb(243, 118, 22);
+            margin:auto;
+            width:100%;
+            text-align:center;
+            padding:5px;
+            color:white;
+         }
+         nav{
+            background-color: black;
+            text-align:center;
+            padding:5px;
+         }
+         nav a{
+            text-decoration:none;
+            color:white;
+            padding:10px 15px;
+         }
+         nav a:hover{
+            background-color:red;
+        
+         }
+         .welcome{
+            text-align:center;
+            
+            border-color:black;
+            background-color: rgb(251, 206, 158);
+            padding:30px;
+         }
+         .Menu{
+            background-color: antiquewhite;
+            padding:10px
+         }
+         .Menu h2{
+            text-align:center;
+         }
+         
+         .Menu_card{
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap:15px;
+            
+         }
+         .item{
+            background:white;
+            text-align:center;
+            padding:5px;
+            border-radius:10px;
+         }
+         img{
+            width:300px;
+         }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Foodie's Restaurant</h1>
+        <p>your taste,your choice</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="welcome">
+        <h2>Welcome to our Restaurant</h2>
+        <p>We serve with love </p>
+    </div>
+<div class="Menu">
+    <h2>Our Menu</h2>
+    <div class="Menu_card">
+        <div class="item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq8WEAb4VTTi_gNWt9uE1tm0xXOeTNKkrrWGPjxNLAvol9zTycAKB0czb6_GpazcDNlYjSqfVuRB0Y_2ZQ1RvIPCYX9U8BQ7xzKnSlMM42RA" alt="Pizaa"><br>
+            <b>Pizaa</b><br>
+            <b>$50</b>
+            
+        </div>
+        <div class="item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq8WEAb4VTTi_gNWt9uE1tm0xXOeTNKkrrWGPjxNLAvol9zTycAKB0czb6_GpazcDNlYjSqfVuRB0Y_2ZQ1RvIPCYX9U8BQ7xzKnSlMM42RA" alt="Pizaa">
+        </div>
+        <div class="item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq8WEAb4VTTi_gNWt9uE1tm0xXOeTNKkrrWGPjxNLAvol9zTycAKB0czb6_GpazcDNlYjSqfVuRB0Y_2ZQ1RvIPCYX9U8BQ7xzKnSlMM42RA" alt="Pizaa">
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

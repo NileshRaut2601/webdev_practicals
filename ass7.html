@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Dashboard</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="ass7.css">
+
+    <!-- Internal CSS -->
+    <style>
+        body{
+            background:linear-gradient(purple,white);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #003366;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e6f2ff;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Title -->
+    <h1>Student Result Dashboard</h1>
+
+    <!-- Section -->
+    <h2 class="section-title">Semester Results</h2>
+
+    <!-- Table -->
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+            <th>Grade</th>
+        </tr>
+
+        <tr>
+            <td>Data Structures</td>
+            <td>95</td>
+            <td>A+</td>
+        </tr>
+
+        <!-- Inline CSS for top scorer -->
+        <tr style="background-color: yellow; font-weight: bold;">
+            <td>Database Management</td>
+            <td>98</td>
+            <td>A+</td>
+        </tr>
+
+        <tr>
+            <td>Operating Systems</td>
+            <td>88</td>
+            <td>A</td>
+        </tr>
+
+        <tr>
+            <td>Computer Networks</td>
+            <td>85</td>
+            <td>A</td>
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+</html>

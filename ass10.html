@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .msg{
+            width:400px;
+            margin:auto;
+            background-color: aqua;
+            padding: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size:20px;
+            margin-bottom:20px;
+        }
+        .button{
+            width:400px;
+            margin:auto;
+            
+            text-align: center;
+
+        }
+        button{
+            padding:5px;
+            width:80%;
+            background-color: bisque;
+            box-shadow: 0px 0px 10px grey;
+            border-radius: 10px;
+            border: none;
+        }
+        button:hover{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="msg" id="msg">
+        Click on change content button to change the string
+    </div>
+    <div class="button">
+    <button onclick="ChangeContent()">Change Content</button>
+    </div>
+
+    <script>
+        function ChangeContent(){
+            document.getElementById('msg').innerHTML='You click on button';
+        }
+    </script>
+</body>
+</html>

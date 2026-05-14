@@ -1,0 +1,162 @@
+<!-- Write HTML program to create a webpage for a fictional event called "I2IT TechCon
+2025." This webpage will include
+● A header introducing the event.
+● Navigation links for different sections (About, Schedule, Contact).
+● A schedule table.
+● A contact form -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I2IT TECHCON</title>
+    <style>
+        body{
+            background-color:rgb(216, 252, 252);
+            width:60%;
+            margin:auto;
+        }
+        h1,p{
+            text-align:center;
+        }
+        nav{
+            background-color:rgba(0, 0, 0, 0.253);
+            margin-bottom:20px;
+            padding:3px;
+            text-align:center;
+            width:100%;
+            
+        }
+        nav a{
+            text-decoration: none;
+            color:black;
+            
+            padding:10px;
+        }
+        nav a:hover{
+            color: blue;
+        }
+        table{
+            border-collapse: collapse;
+            width:80%;
+            margin:auto;
+             
+        }
+        tr,th,td{
+            border:2px solid;
+            text-align:center;
+            
+        }
+        th{
+            background-color: bisque;
+        }
+        .Schedule{
+                margin:auto;
+                text-align:center;
+        }
+        form{
+            width:60%;
+            padding-bottom:20px;
+            padding-left:20px;
+            padding-right:20px;
+            border:1px solid;
+            margin:auto;
+            display:block;
+            background-color: rgb(245, 245, 229);
+            box-shadow: 0px 0px 5px grey;
+        }
+        input[type="text"],input[type="email"],textarea{
+            font-size:12px;
+            padding:5px;
+            width:95%;
+            size:20px;
+        }
+        input[type='text']{
+            margin-bottom:20px;
+        }
+        input[type='email']{
+            margin-bottom:20px;
+        }
+        textarea{
+            margin-bottom:20px;
+        }
+        label{
+            font-weight:bold;
+        }
+        button{
+            width:80%;
+            padding:3px;
+            margin:auto;
+            background-color: rgb(178, 178, 226);
+        }
+        .button{
+            width:80%;
+            margin:auto;
+            text-align:center;
+            
+        }
+        .section{
+            background-color: aqua;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+    <h1>I2IT TECHCON</h1>
+    <p>Inovate Integrate Inspire </p>
+    <nav>
+        <a href="#about" name="about">About</a>
+        <a href="#schedule" name="schedule">Schedule</a>
+        <a href="#contact" name="contact">Contact</a>
+    </nav>
+    <div class="Schedule" id="schedule">
+
+    <h4>Schedule</h4>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Event</th>
+        </tr>
+        <tr>
+            <td>10.00am</td>
+            <td>Opening Ceremony</td>
+        </tr>
+        <tr>
+            <td>11.00am</td>
+            <td>AI Workshop</td>
+        </tr>
+             <td>1.00pm</td>
+             <td>Lunch</td>
+        <tr>
+        </tr>
+             <td>2.00pm</td>
+             <td>Web Development Session</td>
+        <tr>
+        </tr>
+             <td>4.00pm</td>
+             <td>Closing Ceremony</td>
+        
+    </table>
+    <br>
+    <br>
+    </div>
+    <div id="contact">
+    <form>
+        <h2 align="center">Contact</h2>
+        <label>Name:</label><br>
+        <input type="text" placeholder="Enter your Name" required><br>
+        <label>Email:</label><br>
+        <input type="Email" placeholder="Enter your Email" required><br>
+        <label>Message:</label><br>
+        <textarea placeholder="Enter your Message"></textarea><br>
+        <div class="button">
+        <button type="submit">Submit</button>
+        </div>
+    </form>
+    </div>
+    </div>
+
+</body>
+</html>

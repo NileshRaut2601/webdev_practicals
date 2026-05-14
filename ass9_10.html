@@ -1,0 +1,96 @@
+<!-- Write a JavaScript program to create college Library Signup form validation for email,
+mobile no and empty fields and other
+10. Create a web page that uses JavaScript to display dynamic content using DOM. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(193, 122, 122);
+            margin:auto;
+            padding:20px;
+        }
+        .form{
+            width:40%;
+            margin:auto;
+            border: 2px solid;
+            text-align: center;
+            background-color: beige;
+            padding:10px;
+            display:block;
+            box-shadow: 0px 0px 10px grey;
+        }
+        input[type="text"],input[type="email"]{
+            font-size:20px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        button{
+            background-color: blue;
+            width:30%;
+            margin-bottom:20px;
+                }
+        .msg{
+            background-color: beige;
+            width:41%;
+            margin:auto;
+            display: block;
+            text-align:center;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="form" id="form">
+        <form onsubmit="return validatehtml()" name="myform">
+        <h2>College Library</h2>
+         <input type="text" name="name" placeholder="Enter name"><br>
+         <input type="text" name="email" placeholder="Enter email"><br>
+         <input type="text" name="mobile" placeholder="Enter your mobile number" style="background-color: aqua;">
+         <div class="button">
+            <button type="submit" onclick="displaymsg()">submit</button>
+         </div>
+         </form>
+         
+        </div>
+        <div class="msg" id="msg">
+            Fill The Form Correctly
+        </div>
+
+
+    <script>
+         function validatehtml(){
+            let name=document.forms['myform']['name'].value
+            let email=document.forms['myform']['email'].value
+            let mobile=document.forms['myform']['mobile'].value
+        // empty field check
+        if(name=="" || email=="" || mobile==""){
+            alert("Fill all fields");
+            return false
+        }
+            let emailPattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}/;
+            if(!email.match(emailPattern)){
+                alert("invalid email");
+                return false;
+            }
+            let mobilepattern=/[0-9]{10}/;
+            if(!mobile.match(mobilepattern)){
+                alert("Invalid Contact");
+                return false
+            }
+            return true;
+         }
+         //DOM implementation
+         function displaymsg(){
+            if(validatehtml()){
+            document.getElementById('msg').innerHTML="Form submitted";
+         }
+        }
+    </script>
+</body>
+</html>

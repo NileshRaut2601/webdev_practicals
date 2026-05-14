@@ -1,0 +1,81 @@
+<!-- Create a Student registration form with fields: name, email, gender, date of birth, and
+submit button. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration form</title>
+    <style>
+        body{
+            font-family:Times New Roman;
+            
+        }
+        form {
+            width:400px;
+            margin:auto;
+            background-color:rgb(215, 250, 253);
+            padding-left:20px;
+            padding-top:2px;
+            height:400px;
+            box-sizing: border-box;
+            box-shadow:0 0 10px grey;
+
+        }
+        label{
+            font-weight:bold;
+        }
+        form h2{
+            text-align:center;
+        }
+        input[type='text'],input[type="email"],input[type="date"]{
+            padding:5px;
+            width:92%;
+            font-size:15px;
+            
+        }
+        input[type='radio']{
+            background-color: rgb(110, 110, 169);
+        }
+        .section{
+            margin-bottom: 15px;
+        }
+        .button{
+            padding-left: 25px;
+        }
+        button{
+            width:80%;
+            align-items: center;
+            padding:3px;
+            font-size:20px;
+            color:blue;
+            background-color: rgba(227, 211, 241, 0.54);
+            border-radius: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Registration Form</h2>
+        <div class="section">
+            <label>Name:</label><br>
+            <input type="text" name="Name" placeholder="Enter your Name" required><br>
+            <label>Email:</label><br>
+            <input type="email" name="email" placeholder="Enter your Email" required><br>
+            <label>Gender:</label><br>
+            <input type="radio" name="Gender">Male<br>
+            <input type="radio" name="Gender">Female<br>
+            <input type="radio" name="Gender">Other<br>
+            <label>DOB:</label><br>
+            <input type="date" name="DOB">
+            
+            <div class="button">
+                <br>
+                <button type="submit">Submit</button>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

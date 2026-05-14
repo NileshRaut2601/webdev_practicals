@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Signup Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 95%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Library Signup</h2>
+
+    <form name="myForm" onsubmit="return validateForm()">
+
+        <input type="text" name="name" placeholder="Enter Name">
+        <input type="text" name="email" placeholder="Enter Email">
+        <input type="text" name="mobile" placeholder="Enter Mobile Number">
+
+        <button type="submit">Signup</button>
+
+    </form>
+</div>
+
+    <script>
+        // function validateForm() {
+        //     let name = document.forms["myForm"]["name"].value;
+        //     let email = document.forms["myForm"]["email"].value;
+        //     let mobile = document.forms["myForm"]["mobile"].value;
+
+        //     // Empty field check
+        //     if (name == "" || email == "" || mobile == "") {
+        //         alert("All fields are required!");
+        //         return false;
+        //     }
+
+        //     // Email validation
+        //     let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        //     if (!email.match(emailPattern)) {
+        //         alert("Enter valid email!");
+        //         return false;
+        //     }
+
+        //     // Mobile validation (10 digits)
+        //     let mobilePattern = /^[0-9]{10}$/;
+        //     if (!mobile.match(mobilePattern)) {
+        //         alert("Enter valid 10-digit mobile number!");
+        //         return false;
+        //     }
+
+        //     alert("Form submitted successfully!");
+        //     return true;
+        // }
+    </script>
+</body>
+</html>

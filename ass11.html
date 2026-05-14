@@ -1,0 +1,179 @@
+<!-- Write a JavaScript program for a simple calculator using functions and switch-case. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        background-color:bisque;
+            width:400px;
+            margin:auto;
+            
+        }
+        .Display{
+            width: 100%;
+            height: 70px;
+            background-color: aqua;
+            border-color: black;
+            border-radius: 3px;
+            margin-bottom: 2px;
+            font-size: 40pt;
+        }
+        .calculator{
+            border:1px solid black;
+            width:400px;
+            height:350px;
+            background-color: rgba(168, 127, 73, 0.841);
+            padding:3px;
+            margin-top:200px;
+            box-shadow: 1px 3px 10px rgb(114, 29, 29);
+
+        }
+        .line{
+            width:100%;
+            
+            margin-top: 5px;
+            height:50px;
+            
+        }
+        .op{
+            width:100%;
+            
+            margin-top: 5px;
+            height:50px; 
+        }
+        .op button{
+            width:22%;
+        }
+        button{
+            width:30%;
+            height:100%;
+            border-radius:4px;
+            border:none;
+            font-size: 20px;
+            margin-right: 7px;
+            margin-left: 2px;
+            background-color: rgb(148, 208, 236);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+    <div class="Display" value="0" id="Display">
+      0
+    </div>
+    <div class="pad">
+        <div class="op">
+            <button value="+" onclick="Operator('+')">+</button>
+            <button value="-" onclick="Operator('-')">-</button>
+            <button value="*" onclick="Operator('*')">*</button>
+            <button value="/" onclick="Operator('/')">/</button>
+        </div>
+        <div class="line">
+        <button value="1" onclick="operand(1)">1</button>
+        <button value="2" onclick="operand(2)">2</button>
+        <button value="3" onclick="operand(3)">3</button>
+        </div>
+        <div class="line">
+        <button value="4" onclick="operand(4)">4</button>
+        <button value="5" onclick="operand(5)">5</button>
+        <button value="6" onclick="operand(6)">6</button>
+        </div>
+        <div class="line">
+        <button value="7" onclick="operand(7)">7</button>
+        <button value="8" onclick="operand(8)">8</button>
+        <button value="9" onclick="operand(9)">9</button>
+        </div>
+        <div class="line">
+        <button value="clear" onclick="clearDisplay()">clear</button>
+        <button value="0" onclick="operand(0)">0</button>
+        <button value="cal" onclick="Calculate()">cal</button>
+        </div>
+        
+    </div>
+    </div>
+    <script>
+          let operator;
+          let operand1='',operand2='';
+          let  count=0;
+          function operand(val){
+            if(count==0){
+              operand1+=val;
+              document.getElementById('Display').innerHTML=operand1;
+              
+            }
+            else{
+                operand2+=val;
+                document.getElementById('Display').innerHTML=(operand1+operator+operand2);
+            }
+          }
+          function Operator(op){
+             count=1;
+          
+          switch(op){
+            case '+':
+                document.getElementById('Display').innerHTML=(operand1+'+');
+                operator=op;
+                break;
+
+            case '-':
+                document.getElementById('Display').innerHTML=(operand1+'-');
+                operator=op;
+                break;
+            case '*':
+                document.getElementById('Display').innerHTML=(operand1+'*');
+                operator=op;
+                break;
+            case '/':
+                document.getElementById('Display').innerHTML=(operand1+'/');
+                operator=op;
+                break;
+           }
+        }
+
+           function Calculate(){
+               let num1=parseFloat(operand1);
+               let num2=parseFloat(operand2);
+            switch(operator){
+            case '+':
+                document.getElementById('Display').innerHTML=(num1+num2);
+                operand1=num1+num2;
+                operand2='';
+                break;
+
+            case '-':
+                document.getElementById('Display').innerHTML=(num1-num2);
+                operand1=num1-num2;
+                operand2='';
+                break;
+            case '*':
+                document.getElementById('Display').innerHTML=(num1*num2);
+                operand1=num1*num2;
+                operand2='';
+                break;
+            case '/':
+                document.getElementById('Display').innerHTML=(num1/num2);
+                operand1=num1/num2;
+                operand2='';
+                break;
+           }
+        }
+           function clearDisplay(){
+             operand1='';
+             operand2='';
+             operator='';
+             count=0;
+             document.getElementById('Display').innerHTML='0';
+
+           }
+
+           
+          
+
+    </script>
+</body>
+</html>

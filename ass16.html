@@ -1,0 +1,104 @@
+<!-- Write a JavaScript program for a simple calculator which will Calculate the area of a
+rectangle, triangle, or circle using functions and switch-case. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area calculator</title>
+    <style>
+        body{
+            width:400px;
+            margin:auto;
+            background-color: aqua;
+        }
+        
+        .shape{
+            display: block;
+            background-color: beige;
+            border:2px solid black;
+            border-radius: 3px;
+            margin:10px;
+            padding:3px;
+            height:250px;
+            text-align:center;
+        }
+        input{
+            font-size:100%;
+            height:20px;
+            width:80%;
+            margin-bottom:10px;
+        }
+        h2{
+            text-align: center;
+        }
+        button{
+            width:80%;
+            height:25px;
+            padding:3px;
+            background-color: aqua;
+            
+        }
+       
+
+    </style>
+</head>
+<body>
+    
+    <div class="shape">
+   
+        <h2>Rectangle</h2>
+        <label>Breadth</label><br>
+        <input type="number" placeholder="Enter Breadth of rectangle" id="Breadth"><br>
+        <label>Height</label><br>
+        <input type="number" placeholder="Enter Height of rectangle" id="R_Height"><br>
+        <button onclick="calculate('rectangle')">Calculate Area</button> <br>
+        <div id="R_Display" value="0" >0</div>
+
+    </div>
+    <div class="shape">
+   
+        <h2>Triangle</h2>
+        <label>Base</label><br>
+        <input type="number" placeholder="Enter Base of triangle" id="Base"><br>
+        <label>Height</label><br>
+        <input type="number" placeholder="Enter Height of triangle" id="T_Height"><br>
+        <button onclick="calculate('triangle')">Calculate Area</button><br>
+        <div id="T_Display"></div>
+    
+    </div>
+    <div class="shape">
+    
+        <h2>Circle</h2>
+        <label>Radius</label><br>
+        <input type="number" placeholder="Enter Radius of Circle" id="radius"><br>
+        
+        <button onclick="calculate('circle')">Calculate Area</button>
+        <div id="C_Display"></div>
+    
+    </div>
+
+    <script>
+          function calculate(shape){
+            switch(shape){
+                case 'rectangle':
+                    let B=document.getElementById('Breadth').value;
+                    let H=document.getElementById('R_Height').value;
+                    document.getElementById('R_Display').innerHTML=(B*H);
+                    break;
+                case 'triangle':
+                    let tB=document.getElementById('Base').value;
+                    let tH=document.getElementById('T_Height').value;
+                    document.getElementById('T_Display').innerHTML=(0.5*tB*tH);
+                    break;
+                case 'circle':
+                    let r=document.getElementById('radius').value;
+                   document.getElementById('C_Display').innerHTML=(3.14*r*r);
+                
+            }
+          }
+    
+    </script>
+</body>
+</html>

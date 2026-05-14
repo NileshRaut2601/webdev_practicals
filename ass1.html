@@ -1,0 +1,63 @@
+<!-- Create a simple HTML page to display Student portfolio page showing name, course,
+hobbies using text formatting tags (e.g. text fields, checkboxes, and radio buttons) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Portfolio</title>
+    <style>
+        body{
+            font:arial;
+            background-color:whitesmoke;
+        }
+        .container{
+            width: 400px;
+            margin:auto;
+            background-color: rgb(210, 212, 214);
+            border-radius: 10px;
+            border-color:white;
+            padding:20px;
+            box-shadow: 0px 0px 10px grey;
+              }
+        .section{
+            margin-bottom:10px;
+        }
+        label{
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><u>Student Portfolio</u></h1>
+   
+        <div class="Section">
+            <label>Student Name:</label><br>
+            <input type="text" placeholder="Enter your Name">
+        </div>
+        <div class="Section">
+            <label>Course:</label>
+            <br>
+            <input type="radio" name="B.tech"><i>B.TECH</i><br>
+            <input type="radio" name="BCA"><i>BCA</i><br>
+            <input type="radio" name="BCOM"><i>BCOM</i><br>
+
+        </div>
+       <div class="section">
+         <label>Hobbies:</label><br>
+         <input type="checkbox" name="reading"><u>reading<br>
+         <input type="checkbox" name="writing">writing<br>
+         <input type="checkbox" name="coding">coding<br>
+         <input type="checkbox" name="cycling">cycling</u><br>
+        </div>
+        <div class="section">
+        <button type="submit" name="'submit">submit</button>
+        </div>
+   
+    </div>
+</body>
+
+
+
+</html>
